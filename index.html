@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Four Card Section</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f8f9fb;
+        text-align: center;
+        margin: 0;
+        padding: 40px;
+      }
+
+      h2 {
+        font-weight: 400;
+        margin: 0;
+      }
+      h1 {
+        font-weight: 700;
+        margin: 10px 0;
+      }
+      p.sub {
+        color: #555;
+        max-width: 600px;
+        margin: 0 auto 40px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 320px);
+        grid-template-areas:
+          ". team ."
+          "supervisor team calculator"
+          ". karma .";
+        gap: 30px;
+        justify-content: center;
+      }
+      .card {
+        background: #fff;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .card h3 {
+        margin: 0;
+        font-size: 20px;
+      }
+      .card p {
+        margin: 0;
+        font-size: 15px;
+        color: #555;
+        line-height: 1.5;
+      }
+
+      .icon {
+        width: 50px;
+        height: 50px;
+        object-fit: scale-down;
+      }
+
+      .supervisor {
+        grid-area: supervisor;
+        border-top: 5px solid hsl(180, 62%, 55%);
+      }
+      .team {
+        grid-area: team;
+        border-top: 5px solid hsl(0, 78%, 62%);
+      }
+      .karma {
+        grid-area: karma;
+        border-top: 5px solid hsl(34, 97%, 64%);
+      }
+      .calculator {
+        grid-area: calculator;
+        border-top: 5px solid hsl(212, 86%, 64%);
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Reliable, efficient delivery</h2>
+    <h1>Powered by Technology</h1>
+    <p class="sub">
+      Our Artificial Intelligence powered tools use millions of project data
+      points to ensure that your project is successful
+    </p>
+
+    <div class="grid">
+      <div class="card supervisor">
+        <img src="icon-supervisor.svg" alt="Supervisor Icon" class="icon" />
+        <h3>Supervisor</h3>
+        <p>Monitors activity to identify project roadblocks</p>
+      </div>
+
+      <div class="card team">
+        <img src="icon-team-builder.svg" alt="Team Icon" class="icon" />
+        <h3>Team Builder</h3>
+        <p>
+          Scans our talent network to create the optimal team for your project
+        </p>
+      </div>
+
+      <div class="card calculator">
+        <img src="icon-calculator.svg" alt="Calculator Icon" class="icon" />
+        <h3>Calculator</h3>
+        <p>Uses data from past projects to provide better delivery estimates</p>
+      </div>
+
+      <div class="card karma">
+        <img src="icon-karma.svg" alt="Karma Icon" class="icon" />
+        <h3>Karma</h3>
+        <p>Regularly evaluates our talent to ensure quality</p>
+      </div>
+    </div>
+  </body>
+</html>
